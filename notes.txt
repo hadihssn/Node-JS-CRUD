@@ -1,0 +1,20 @@
+we will be exploring mongodb, express js and node js
+
+while developing APIs we need end points for all types of requests like 4 endpoints/urls will be required for each of GET, POST, PATCH/PUT, and DELETE requests'
+
+mongoose is a tool for mongodb
+
+to initialize your project you need to run the command 'npm init'. this will make your 'package.json' file
+
+next you need to setup express package. for this run the command 'npm install express'. to validate check 'package.json' file. it will have a new line as dependencies
+
+now we need 2 more packages. one is 'mongodb' and the second one is 'mongoose'. the command will be the same just replace the package name
+
+now we will install nodemon. nodemon is used so that after every small change you don't have to restart your server. you only need to press save and the changes will go live (--save -dev: this makes the dependency available only for development)
+
+next step is to bring in express and mongoose
+
+
+models -> admin.js
+--> first we will require mongoose to bring it in 
+    next we need to build the basic structure for admin. mongodb is a nosql database but we need to provide a basic structure
