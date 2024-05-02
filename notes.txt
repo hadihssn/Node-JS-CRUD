@@ -63,3 +63,11 @@ this is done so that the incoming request can be parsed before the handler handl
 now we can send data from client which is postman for now and save it to database. i saved three objects or in my case admins which are my fyp partners and myself. this was done using postman. using the post command in JSON format.
 
 after this you can use GET command and see all members which have been saved. or even add the id to the URL to retrieve a specific object
+
+-----------------------------
+
+now let us work with PATCH and DELETE
+
+code from lines 57-70 is for PATCH command. here we are accepting an id from the frontend/client and then searching that ID from our database.
+
+next we will be modifying the exisiting data which in this case is the designation variable of our ADMIN. then we will be saving it to the database and showing the modified object back to the frontend/client.

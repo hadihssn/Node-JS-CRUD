@@ -8,11 +8,13 @@ const adminsSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        default: 'person@gmail.com'
     },
     designation: {
         type: String,
-        required: true
+        required: true,
+        default: 'Employee'
     }
 
 })
