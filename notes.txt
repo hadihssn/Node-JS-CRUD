@@ -18,3 +18,48 @@ next step is to bring in express and mongoose
 models -> admin.js
 --> first we will require mongoose to bring it in 
     next we need to build the basic structure for admin. mongodb is a nosql database but we need to provide a basic structure
+
+-----------------------------
+
+client uses url to communicate with the backend
+
+routes are created to accept your request from client side
+
+all requests sent should be async so execution is not locked
+
+M - model      -> Schema
+V - view       -> UI
+C - controller -> Router
+
+every entity should be having its own model
+
+SQL and MonogoDB (NoSQL)
+RDBMS    - mongodb
+Database - Database
+Tables   - Collections
+Rows     - Documents
+Columns  - Fields
+
+-----------------------------
+
+sending data to database
+for that we need to make a post request
+creating post request in admins.js file on line number 15
+
+we will create an object
+this object will accept all values
+
+now we will try to save the data to database and catch will do the error work
+
+''req and res are objects that Node.js provides you in a route handler function.
+
+req stands for Request. It is an object that contains information about the HTTP request that was made to the server, including form data, cookies, HTTP headers, and other metadata.
+
+res stands for Response. It is an object that allows you to craft an HTTP response to send back to the client. You can specify the HTTP status code, set cookies, send custom HTTP headers, and of course, send the body of the response, which can be text, HTML, JSON, or some binary data like an image.''
+
+added line "app.use(express.json())" in app.js file
+this is done so that the incoming request can be parsed before the handler handles it
+
+now we can send data from client which is postman for now and save it to database. i saved three objects or in my case admins which are my fyp partners and myself. this was done using postman. using the post command in JSON format.
+
+after this you can use GET command and see all members which have been saved. or even add the id to the URL to retrieve a specific object
