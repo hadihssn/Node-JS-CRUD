@@ -69,5 +69,18 @@ router.patch('/:id', async (req, res) => {
     }
 })
 
+// below is the code for DELETE command
+router.delete('/:id', async (req, res) => {
+    try {
+        const admin = await Admin.findByIdAndDelete(req.params.id) // removing the specified admin from DB
+        console.log(req.params.id)
+  
+        res.json("User deleted successfully")
+    }
+    catch (err) {
+        res.send('Error')
+    }
+})
+
 // exporting this router so that it is accessible in app.js
 module.exports = router
